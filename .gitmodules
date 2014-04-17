@@ -1,0 +1,3 @@
+[submodule "lib/HLSprovider"]
+	path = lib/HLSprovider
+	url = https://github.com/mangui/HLSprovider.git
