@@ -85,7 +85,7 @@ package org.osmf.player.configuration
 		public var skin:String = "";
 		
 		/** Defines if messages will show verbose or not */ 
-		public var verbose:Boolean = false;
+		public var verbose:Boolean = CONFIG::DEBUG;
 		
 		/** Defines the path to the image to show before the main content shows */
 		public var poster:String = "";
@@ -94,19 +94,19 @@ package org.osmf.player.configuration
 		public var endOfVideoOverlay:String = "";
 	
 		/** Defines if the play button overlay appears */
-		public var playButtonOverlay:Boolean = true;
+		public var playButtonOverlay:Boolean = CONFIG::DEBUG;
 		
 		/** Defines if the buffering overlay appears */
-		public var bufferingOverlay:Boolean = true;
+		public var bufferingOverlay:Boolean = CONFIG::DEBUG;
 		
 		/** Defines the high quality threshold */
 		//public var highQualityThreshold:uint = 480;
 		
 		/** Defines the video rendering mode */
-		//public var videoRenderingMode:uint = VideoRenderingMode.AUTO;
+		public var videoRenderingMode:uint = VideoRenderingMode.AUTO;
 		
 		/** Defines the auto switch quality */
-		//public var autoSwitchQuality:Boolean = true;
+		public var autoSwitchQuality:Boolean = true;
 		
 		/** Defines the optimizeInitialIndex flag */ 
 		public var optimizeInitialIndex:Boolean = true
@@ -135,9 +135,12 @@ package org.osmf.player.configuration
 		public var rtmpNetConnectionFactoryTimeout:Number = 10;
 		public var multicastNetConnectionFactoryTimeout:Number = 60;
 		
-		public var showVideoInfoOverlayOnStartUp:Boolean = false;
+		public var showVideoInfoOverlayOnStartUp:Boolean = CONFIG::DEBUG;
 		
 		public var enableStageVideo:Boolean = true;
+		
+		// dirty fix for IE hardware acceleration problems in wmode opaque/transparent (be aware of drop in performance especialy with HD videos)
+		public var disableHardwareAcceleration:Boolean = false;
 		
 		// Debug configuration setting
 		public var removeContentFromStageOnFullScreenWithStageVideo:Boolean = false;
