@@ -19,11 +19,15 @@
 
 package
 {	
+	
+	
 	import flash.display.*;
 	import flash.events.*;
 	import flash.external.ExternalInterface;
 	import flash.net.drm.DRMManager;
 	import flash.system.Capabilities;
+	import flash.system.Security;
+	import flash.system.System;
 	import flash.ui.Mouse;
 	import flash.utils.Timer;
 	
@@ -81,7 +85,7 @@ package
 			super();
 			
 			addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
-			
+			Security.allowDomain("*");
 			CONFIG::LOGGING
 			{
 				// Setup the custom logging factory 
