@@ -61,7 +61,7 @@ package org.osmf.player.configuration
 		public var controlBarAutoHideTimeout:Number = 3;
 		
 		/** The location of the control bar */ 
-		public var controlBarMode:String = ControlBarMode.DOCKED;
+		public var controlBarMode:String = CONFIG::DEBUG ? ControlBarMode.DOCKED : ControlBarMode.NONE;
 		
 		/** The type of the control bar */
 		public var controlBarType:String = ControlBarType.DESKTOP;
