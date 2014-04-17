@@ -1,3 +1,6 @@
 [submodule "lib/HLSprovider"]
 	path = lib/HLSprovider
 	url = https://github.com/mangui/HLSprovider.git
+[submodule "lib/osmf-hls-plugin"]
+	path = lib/osmf-hls-plugin
+	url = https://github.com/denivip/osmf-hls-plugin.git
