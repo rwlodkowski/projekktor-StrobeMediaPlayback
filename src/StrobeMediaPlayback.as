@@ -59,6 +59,16 @@ package
 	import org.osmf.utils.OSMFSettings;
 	import org.osmf.utils.OSMFStrings;
 	
+	CONFIG::STATIC_PLUGINS {
+		CONFIG::MSS {
+			import com.microsoft.azure.media.AdaptiveStreamingPluginInfo;
+		}
+		
+		CONFIG::HLS {
+			import org.mangui.osmf.plugins.HLSPlugin;
+		}
+	}
+	
 	CONFIG::LOGGING
 	{
 		import org.osmf.player.debug.DebugStrobeMediaPlayer;
@@ -225,6 +235,8 @@ package
 		
 		private function reportError(message:String):void
 		{
+			CONFIG::DEBUG {
+				
 			// If an alert widget is available, use it. Otherwise, trace the message:
 			if (alert)
 			{
@@ -255,6 +267,8 @@ package
 			else
 			{
 				trace("Error:", message); 
+			}
+			
 			}
 		}
 		
@@ -319,7 +333,22 @@ package
 			}
 			
 			var pluginLoader:PluginLoader;
+			
 			factory = injector.getInstance(MediaFactory);
+			
+			CONFIG::STATIC_PLUGINS {
+			factory.addEventListener(MediaFactoryEvent.PLUGIN_LOAD, onLoadPlugin);
+			factory.addEventListener(MediaFactoryEvent.PLUGIN_LOAD_ERROR, onError);
+			
+				CONFIG::HLS {
+					factory.loadPlugin(new PluginInfoResource(new HLSPlugin()));
+				}
+				
+				CONFIG::MSS {
+					factory.loadPlugin(new PluginInfoResource(new AdaptiveStreamingPluginInfo()));
+				}
+			}
+			
 			pluginLoader = new PluginLoader(pluginConfigurations, factory, pluginHostWhitelist);
 			pluginLoader.haltOnError = configuration.haltOnError;
 			
@@ -327,6 +356,18 @@ package
 			pluginLoader.addEventListener(MediaErrorEvent.MEDIA_ERROR, onMediaError);
 			pluginLoader.loadPlugins();
 		}			
+		
+		CONFIG::STATIC_PLUGINS {
+			protected function onError(event:MediaFactoryEvent):void
+			{
+	
+			}
+			
+			protected function onLoadPlugin(event:MediaFactoryEvent):void
+			{
+				
+			}
+		}
 		
 		private function initializeView():void
 		{			
