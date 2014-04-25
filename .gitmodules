@@ -4,3 +4,6 @@
 [submodule "lib/osmf-hls-plugin"]
 	path = lib/osmf-hls-plugin
 	url = https://github.com/denivip/osmf-hls-plugin.git
+[submodule "lib/dashas"]
+	path = lib/dashas
+	url = https://github.com/castlabs/dashas
