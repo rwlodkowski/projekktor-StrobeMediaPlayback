@@ -341,7 +341,14 @@ package
 			factory.addEventListener(MediaFactoryEvent.PLUGIN_LOAD_ERROR, onError);
 			
 				CONFIG::HLS {
-					factory.loadPlugin(new PluginInfoResource(new HLSPlugin()));
+					var hlsPluginResource:PluginInfoResource = new PluginInfoResource(new HLSPlugin());
+					/*for each(var urlPluginResource:URLResource in pluginConfigurations)
+					{	
+						if(urlPluginResource.url == 'org.mangui.osmf.plugins.HLSPlugin'){
+							hlsPluginResource.addMetadataValue('org.mangui.osmf.plugins.HLSPlugin', urlPluginResource.getMetadataValue('test'));
+						}
+					}*/
+					factory.loadPlugin(hlsPluginResource);
 				}
 				
 				CONFIG::MSS {
