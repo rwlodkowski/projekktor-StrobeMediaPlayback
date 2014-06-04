@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>StrobeMediaPlayback</name>
+	<name>projekktor-StrobeMediaPlayback</name>
 	<comment></comment>
 	<projects>
 		<project>ChromeLibrary</project>
+		<project>HLSProvider</project>
+		<project>OSMF</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
