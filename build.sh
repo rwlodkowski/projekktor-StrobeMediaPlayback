@@ -10,7 +10,7 @@ COMMON_OPT="-library-path+=./assets/assets.swc \
     -swf-version=11 \
 	-optimize=true \
     -use-direct-blit=false \
-	-incremental=true \
+	-incremental=false \
 	-default-background-color=0x000000 \
 	-static-link-runtime-shared-libraries=true"
 
