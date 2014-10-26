@@ -5,9 +5,9 @@
 COMMON_OPT="-library-path+=./assets/assets.swc \
             -library-path+=./lib/OSMF/OSMF.swc \
             -library-path+=./lib/flashls/bin/release/flashlsOSMF.swc \
-            -library-path+=./lib/MSAdaptiveStreamingPlugin/1.0.10/MSAdaptiveStreamingPlugin-v1.0.10-osmf2.0.swc \
-    -target-player=10.2 \
-    -swf-version=11 \
+            -library-path+=./lib/MSAdaptiveStreamingPlugin/1.0.12/MSAdaptiveStreamingPlugin-v1.0.12-osmf2.0.swc \
+    -target-player=11.4 \
+    -swf-version=17 \
     -optimize=true \
     -use-direct-blit=false \
     -incremental=false \
