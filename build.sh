@@ -75,7 +75,22 @@ mxmlc ./src/StrobeMediaPlayback.as \
     -define=CONFIG::MSS,true \
     -define=CONFIG::HLS,true \
     -define=CONFIG::STATIC_PLUGINS,true
-    
+
+echo 
+echo "=================================="
+echo
+echo "Compiling StrobeMediaPlayback_debug.swf - projekktor-StrobeMediaPlayback without static plugins debug version:"
+mxmlc ./src/StrobeMediaPlayback.as \
+    -source-path ./src  \
+    -o ./bin/StrobeMediaPlayback_debug.swf \
+    $COMMON_OPT \
+    -debug=true \
+    -define=CONFIG::LOGGING,true \
+    -define=CONFIG::DEBUG,true \
+    -define=CONFIG::FLASH_10_1,true \
+    -define=CONFIG::MSS,false \
+    -define=CONFIG::HLS,false \
+    -define=CONFIG::STATIC_PLUGINS,false
 echo 
 echo "=================================="
 echo
