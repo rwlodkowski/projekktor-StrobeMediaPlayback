@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <actionScriptProperties analytics="false" mainApplicationPath="StrobeMediaPlayback.as" projectUUID="63b12c52-3cb2-4f6c-8a0f-db3243794cef" version="10">
-  <compiler additionalCompilerArguments="-swf-version=11 -define CONFIG::LOGGING true -define CONFIG::DEBUG true -define CONFIG::FLASH_10_1 true -define CONFIG::MSS true -define CONFIG::HLS true -define CONFIG::STATIC_PLUGINS true" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src" strict="true" targetPlayerVersion="10.2.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+  <compiler additionalCompilerArguments="-swf-version=17&#13;&#10;-define CONFIG::LOGGING true -define CONFIG::DEBUG true -define CONFIG::FLASH_10_1 true -define CONFIG::MSS true -define CONFIG::HLS true -define CONFIG::STATIC_PLUGINS true" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src" strict="true" targetPlayerVersion="11.4.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
     <compilerSourcePath/>
     <libraryPath defaultLinkType="1">
       <libraryPathEntry kind="4" path="">
@@ -22,7 +22,7 @@
       <libraryPathEntry kind="3" linkType="1" path="assets/assets.swc" useDefaultLinkType="false"/>
       <libraryPathEntry kind="3" linkType="1" path="lib/OSMF/OSMF.swc" useDefaultLinkType="false"/>
       <libraryPathEntry kind="3" linkType="1" path="lib/flashls/bin/debug/flashlsOSMF.swc" useDefaultLinkType="false"/>
-      <libraryPathEntry kind="3" linkType="1" path="lib/MSAdaptiveStreamingPlugin/1.0.10/MSAdaptiveStreamingPlugin-v1.0.10-osmf2.0.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="lib/MSAdaptiveStreamingPlugin/1.0.12/MSAdaptiveStreamingPlugin-v1.0.12-osmf2.0.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>
