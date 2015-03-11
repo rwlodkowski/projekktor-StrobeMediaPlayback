@@ -139,9 +139,6 @@ package org.osmf.player.configuration
 		
 		public var enableStageVideo:Boolean = true;
 		
-		// dirty fix for IE hardware acceleration problems in wmode opaque/transparent (be aware of drop in performance especialy with HD videos)
-		public var disableHardwareAcceleration:Boolean = false;
-		
 		// Debug configuration setting
 		public var removeContentFromStageOnFullScreenWithStageVideo:Boolean = false;
 		public var useFullScreenSourceRectOnFullScreenWithStageVideo:Boolean = false;

@@ -500,17 +500,6 @@ package
 			{
 				qosOverlay.showInfo();
 			}
-
-			// dirty fix for IE hardware acceleration problems in wmode opaque/transparent (be aware of drop in performance especialy with HD videos)
-			if (configuration.disableHardwareAcceleration) {
-				hardwareAccelerationDisablingOverlay = new Sprite();
-				hardwareAccelerationDisablingOverlay.graphics.beginFill(0xFFFFFF, 1);
-				hardwareAccelerationDisablingOverlay.graphics.drawRect(0, 0, 10, 10);
-				hardwareAccelerationDisablingOverlay.width = stage.stageWidth;
-				hardwareAccelerationDisablingOverlay.height = stage.stageHeight;
-				hardwareAccelerationDisablingOverlay.alpha = 0.01;
-				addChild(hardwareAccelerationDisablingOverlay);
-			}
 			
 			// update the dimensions of the container
 			onStageResize();
@@ -1016,10 +1005,6 @@ package
 				mainContainer.width = newWidth;
 				mainContainer.height = newHeigth;
 			}
-			if (hardwareAccelerationDisablingOverlay != null){
-				hardwareAccelerationDisablingOverlay.width = newWidth;
-				hardwareAccelerationDisablingOverlay.height = newHeigth;
-			}	
 			
 			// Propagate dimensions to the control bar:
 			if (controlBar != null)
@@ -1190,7 +1175,6 @@ package
 		private var posterImage:ImageElement;
 		private var playOverlay:PlayButtonOverlay;
 		private var bufferingOverlay:BufferingOverlay;
-		private var hardwareAccelerationDisablingOverlay:Sprite;
 		
 		private var controlBarWidth:Number;
 		private var controlBarHeight:Number;
