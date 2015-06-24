@@ -32,165 +32,47 @@ TARGET_11_4_OPT="-target-player=11.4 \
                  -library-path+=./lib/MSAdaptiveStreamingPlugin/1.0.12/MSAdaptiveStreamingPlugin-v1.0.12-osmf2.0.swc"
 
 echo "=================================="
-echo "Compiling StrobeMediaPlayback.swf - projekktor-StrobeMediaPlayback without static plugins:"
-mxmlc ./src/StrobeMediaPlayback.as \
-    -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback.swf \
-    $COMMON_OPT \
-    $RELEASE_OPT \
-    $TARGET_11_4_OPT \
-    -define=CONFIG::MSS,false \
-    -define=CONFIG::HLS,false \
-    -define=CONFIG::STATIC_PLUGINS,false
-    
-echo 
-echo "=================================="
 echo
-echo "Compiling StrobeMediaPlayback_hls.swf - projekktor-StrobeMediaPlayback with HLS static plugin:"
+echo "Compiling StrobeMediaPlayback.swf - projekktor-StrobeMediaPlayback"
 mxmlc ./src/StrobeMediaPlayback.as \
     -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_hls.swf \
+    -o ./bin/relase/StrobeMediaPlayback.swf \
     $COMMON_OPT \
     $RELEASE_OPT \
-    $TARGET_11_4_OPT \
-    -define=CONFIG::MSS,false \
-    -define=CONFIG::HLS,true \
-    -define=CONFIG::STATIC_PLUGINS,true
+    $TARGET_11_4_OPT 
 
 echo 
 echo "=================================="
 echo
-echo "Compiling StrobeMediaPlayback_mss.swf - projekktor-StrobeMediaPlayback with MSS static plugin:"
+echo "Compiling StrobeMediaPlayback.swf - projekktor-StrobeMediaPlayback debug version:"
 mxmlc ./src/StrobeMediaPlayback.as \
     -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_mss.swf \
+    -o ./bin/debug/StrobeMediaPlayback.swf \
     $COMMON_OPT \
-    $RELEASE_OPT \
-    $TARGET_11_4_OPT \
-    -define=CONFIG::MSS,true \
-    -define=CONFIG::HLS,false \
-    -define=CONFIG::STATIC_PLUGINS,true
-    
-echo 
-echo "=================================="
-echo
-echo "Compiling StrobeMediaPlayback_hls_mss.swf - projekktor-StrobeMediaPlayback with HLS & MSS static plugins:"
-mxmlc ./src/StrobeMediaPlayback.as \
-    -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_hls_mss.swf \
-    $COMMON_OPT \
-    $RELEASE_OPT \
-    $TARGET_11_4_OPT \
-    -define=CONFIG::MSS,true \
-    -define=CONFIG::HLS,true \
-    -define=CONFIG::STATIC_PLUGINS,true
+    $DEBUG_OPT \
+    $TARGET_11_4_OPT 
 
 echo 
 echo "=================================="
 echo
-echo "Compiling StrobeMediaPlayback_debug.swf - projekktor-StrobeMediaPlayback without static plugins debug version:"
+echo "Compiling StrobeMediaPlayback.swf - projekktor-StrobeMediaPlayback target 10.2 for Linux:"
 mxmlc ./src/StrobeMediaPlayback.as \
     -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_debug.swf \
-    $COMMON_OPT \
-    $DEBUG_OPT \
-    $TARGET_11_4_OPT \
-    -define=CONFIG::MSS,false \
-    -define=CONFIG::HLS,false \
-    -define=CONFIG::STATIC_PLUGINS,false
-echo 
-echo "=================================="
-echo
-echo "Compiling StrobeMediaPlayback_hls_mss_debug.swf - projekktor-StrobeMediaPlayback with HLS & MSS static plugins debug version:"
-mxmlc ./src/StrobeMediaPlayback.as \
-    -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_hls_mss_debug.swf \
-    $COMMON_OPT \
-    $DEBUG_OPT \
-    $TARGET_11_4_OPT \
-    -define=CONFIG::MSS,true \
-    -define=CONFIG::HLS,true \
-    -define=CONFIG::STATIC_PLUGINS,true
-echo 
-echo "=================================="
-echo "Compiling StrobeMediaPlayback.swf - projekktor-StrobeMediaPlayback without static plugins - for Linux:"
-mxmlc ./src/StrobeMediaPlayback.as \
-    -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_target_10.2.swf \
+    -o ./bin/relase/StrobeMediaPlayback_target_10.2.swf \
     $COMMON_OPT \
     $RELEASE_OPT \
-    $TARGET_10_2_OPT \
-    -define=CONFIG::MSS,false \
-    -define=CONFIG::HLS,false \
-    -define=CONFIG::STATIC_PLUGINS,false
-    
-echo 
-echo "=================================="
-echo
-echo "Compiling StrobeMediaPlayback_hls.swf - projekktor-StrobeMediaPlayback with HLS static plugin - for Linux:"
-mxmlc ./src/StrobeMediaPlayback.as \
-    -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_hls_target_10.2.swf \
-    $COMMON_OPT \
-    $RELEASE_OPT \
-    $TARGET_10_2_OPT \
-    -define=CONFIG::MSS,false \
-    -define=CONFIG::HLS,true \
-    -define=CONFIG::STATIC_PLUGINS,true
+    $TARGET_10_2_OPT
 
 echo 
 echo "=================================="
 echo
-echo "Compiling StrobeMediaPlayback_mss.swf - projekktor-StrobeMediaPlayback with MSS static plugin - for Linux:"
+echo "Compiling StrobeMediaPlayback_debug.swf - projekktor-StrobeMediaPlayback debug version target 10.2 for Linux:"
 mxmlc ./src/StrobeMediaPlayback.as \
     -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_mss_target_10.2.swf \
+    -o ./bin/debug/StrobeMediaPlayback_debug_target_10.2.swf \
     $COMMON_OPT \
-    $RELEASE_OPT \
-    $TARGET_10_2_OPT \
-    -define=CONFIG::MSS,true \
-    -define=CONFIG::HLS,false \
-    -define=CONFIG::STATIC_PLUGINS,true
+    $DEBUG_OPT \
+    $TARGET_10_2_OPT
     
-echo 
-echo "=================================="
-echo
-echo "Compiling StrobeMediaPlayback_hls_mss.swf - projekktor-StrobeMediaPlayback with HLS & MSS static plugins - for Linux:"
-mxmlc ./src/StrobeMediaPlayback.as \
-    -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_hls_mss_target_10.2.swf \
-    $COMMON_OPT \
-    $RELEASE_OPT \
-    $TARGET_10_2_OPT \
-    -define=CONFIG::MSS,true \
-    -define=CONFIG::HLS,true \
-    -define=CONFIG::STATIC_PLUGINS,true
-
-echo 
-echo "=================================="
-echo
-echo "Compiling StrobeMediaPlayback_debug.swf - projekktor-StrobeMediaPlayback without static plugins debug version - for Linux:"
-mxmlc ./src/StrobeMediaPlayback.as \
-    -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_debug_target_10.2.swf \
-    $COMMON_OPT \
-    $DEBUG_OPT \
-    $TARGET_10_2_OPT \
-    -define=CONFIG::MSS,false \
-    -define=CONFIG::HLS,false \
-    -define=CONFIG::STATIC_PLUGINS,false
-echo 
-echo "=================================="
-echo
-echo "Compiling StrobeMediaPlayback_hls_mss_debug.swf - projekktor-StrobeMediaPlayback with HLS & MSS static plugins debug version - for Linux:"
-mxmlc ./src/StrobeMediaPlayback.as \
-    -source-path ./src  \
-    -o ./bin/StrobeMediaPlayback_hls_mss_debug_target_10.2.swf \
-    $COMMON_OPT \
-    $DEBUG_OPT \
-    $TARGET_10_2_OPT \
-    -define=CONFIG::MSS,true \
-    -define=CONFIG::HLS,true \
-    -define=CONFIG::STATIC_PLUGINS,true
 echo 
 echo "=================================="

@@ -59,16 +59,6 @@ package
 	import org.osmf.utils.OSMFSettings;
 	import org.osmf.utils.OSMFStrings;
 	
-	CONFIG::STATIC_PLUGINS {
-		CONFIG::MSS {
-			import com.microsoft.azure.media.AdaptiveStreamingPluginInfo;
-		}
-		
-		CONFIG::HLS {
-			import org.mangui.osmf.plugins.HLSPlugin;
-		}
-	}
-	
 	CONFIG::LOGGING
 	{
 		import org.osmf.player.debug.DebugStrobeMediaPlayer;
@@ -336,26 +326,6 @@ package
 			
 			factory = injector.getInstance(MediaFactory);
 			
-			CONFIG::STATIC_PLUGINS {
-			factory.addEventListener(MediaFactoryEvent.PLUGIN_LOAD, onLoadPlugin);
-			factory.addEventListener(MediaFactoryEvent.PLUGIN_LOAD_ERROR, onError);
-			
-				CONFIG::HLS {
-					var hlsPluginResource:PluginInfoResource = new PluginInfoResource(new HLSPlugin());
-					/*for each(var urlPluginResource:URLResource in pluginConfigurations)
-					{	
-						if(urlPluginResource.url == 'org.mangui.osmf.plugins.HLSPlugin'){
-							hlsPluginResource.addMetadataValue('org.mangui.osmf.plugins.HLSPlugin', urlPluginResource.getMetadataValue('test'));
-						}
-					}*/
-					factory.loadPlugin(hlsPluginResource);
-				}
-				
-				CONFIG::MSS {
-					factory.loadPlugin(new PluginInfoResource(new AdaptiveStreamingPluginInfo()));
-				}
-			}
-			
 			pluginLoader = new PluginLoader(pluginConfigurations, factory, pluginHostWhitelist);
 			pluginLoader.haltOnError = configuration.haltOnError;
 			
@@ -363,18 +333,6 @@ package
 			pluginLoader.addEventListener(MediaErrorEvent.MEDIA_ERROR, onMediaError);
 			pluginLoader.loadPlugins();
 		}			
-		
-		CONFIG::STATIC_PLUGINS {
-			protected function onError(event:MediaFactoryEvent):void
-			{
-	
-			}
-			
-			protected function onLoadPlugin(event:MediaFactoryEvent):void
-			{
-				
-			}
-		}
 		
 		private function initializeView():void
 		{			
