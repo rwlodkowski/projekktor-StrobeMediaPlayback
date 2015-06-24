@@ -36,7 +36,7 @@ echo
 echo "Compiling StrobeMediaPlayback.swf - projekktor-StrobeMediaPlayback"
 mxmlc ./src/StrobeMediaPlayback.as \
     -source-path ./src  \
-    -o ./bin/relase/StrobeMediaPlayback.swf \
+    -o ./bin/release/StrobeMediaPlayback.swf \
     $COMMON_OPT \
     $RELEASE_OPT \
     $TARGET_11_4_OPT 
@@ -58,7 +58,7 @@ echo
 echo "Compiling StrobeMediaPlayback.swf - projekktor-StrobeMediaPlayback target 10.2 for Linux:"
 mxmlc ./src/StrobeMediaPlayback.as \
     -source-path ./src  \
-    -o ./bin/relase/StrobeMediaPlayback_target_10.2.swf \
+    -o ./bin/release/StrobeMediaPlayback_target_10.2.swf \
     $COMMON_OPT \
     $RELEASE_OPT \
     $TARGET_10_2_OPT
@@ -69,7 +69,7 @@ echo
 echo "Compiling StrobeMediaPlayback_debug.swf - projekktor-StrobeMediaPlayback debug version target 10.2 for Linux:"
 mxmlc ./src/StrobeMediaPlayback.as \
     -source-path ./src  \
-    -o ./bin/debug/StrobeMediaPlayback_debug_target_10.2.swf \
+    -o ./bin/debug/StrobeMediaPlayback_target_10.2.swf \
     $COMMON_OPT \
     $DEBUG_OPT \
     $TARGET_10_2_OPT
