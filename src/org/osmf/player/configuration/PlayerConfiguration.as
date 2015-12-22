@@ -132,6 +132,8 @@ package org.osmf.player.configuration
 				
 		public var javascriptCallbackFunction:String = "";
 		
+		public var javascriptErrorCallbackFunction:String = "";
+		
 		public var rtmpNetConnectionFactoryTimeout:Number = 10;
 		public var multicastNetConnectionFactoryTimeout:Number = 60;
 		

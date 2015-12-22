@@ -1098,7 +1098,7 @@ package
 				try
 				{	
 					ExternalInterface.call
-						( EXTERNAL_INTERFACE_ERROR_CALL
+						( configuration.javascriptErrorCallbackFunction != "" ? configuration.javascriptErrorCallbackFunction : EXTERNAL_INTERFACE_ERROR_CALL
 							, ExternalInterface.objectID
 							, event.error.errorID, event.error.message, event.error.detail
 						);
